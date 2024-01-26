@@ -33,8 +33,8 @@ public class TidesController {
     @Operation(summary = "Get water level for date range, in local time.", description = "For station id, see: https://tidesandcurrents.noaa.gov/tide_predictions.html?gid=1393")
     @GetMapping("/get")
     public ResponseEntity<String> getTides(
-        @Parameter(name="beginDate", description="beginDate in format yyyymmdd", example="beginDate") @RequestParam String beginDate,
-        @Parameter(name="endDate", description="endDate in format yyyymmdd", example="endDate") @RequestParam String endDate,
+        @Parameter(name="beginDate", description="beginDate in format yyyymmdd") @RequestParam String beginDate,
+        @Parameter(name="endDate", description="endDate in format yyyymmdd") @RequestParam String endDate,
         @Parameter(name="station", description="station", example="9411340") @RequestParam String station
     ) throws JsonProcessingException {
         log.info("getTides: beginDate={} endDate={} station={}", beginDate, endDate, station);
