@@ -38,7 +38,7 @@ public class TidesController {
         @Parameter(name="station", description="station\n\nExample : 9411340", example="9411340") @RequestParam String station
     ) throws JsonProcessingException {
         log.info("getTides: beginDate={} endDate={} station={}", beginDate, endDate, station);
-        String result = TidesQueryService.getJSON(beginDate, endDate, station);
+        String result = tidesQueryService.getJSON(beginDate, endDate, station);
         return ResponseEntity.ok().body(result);
     }
 
