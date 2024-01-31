@@ -27,7 +27,7 @@ public class TidesQueryServiceTests {
         String beginDate = "20120101";
         String endDate = "20120102";
         String station = "9411340";
-        String expectedURL = TidesQueryService.ENDPOINT.replace("{beginDate}", beginDate) //fix this
+        String expectedURL = TidesQueryService.ENDPOINT.replace("{beginDate}", beginDate)
                 .replace("{endDate}", endDate).replace("{station}", station);
 
         String fakeJsonResult = "{ \"fake\" : \"result\" }";
