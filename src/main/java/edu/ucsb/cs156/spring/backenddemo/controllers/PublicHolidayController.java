@@ -29,11 +29,11 @@ public class PublicHolidayController {
     @Autowired
     PublicHolidayQueryService publicHolidayQueryService;
 
-    @Operation(summary="Get a country's public holidays", description ="JSON return format documented here: https://date.nager.at/Api")
+    @Operation(summary="Get public holidays for a given year and country", description ="JSON return format documented here: https://date.nager.at/Api")
     @GetMapping("/get")
     public ResponseEntity<String> getPublicHolidays(
-        @Parameter(name="year", example="2012") @RequestParam String year,
-        @Parameter(name="countryCode", example="US") @RequestParam String countryCode
+         @Parameter(name="countryCode", description="2 letter country code", example="US,MX,CN") @RequestParam String countryCode,
+	 @Parameter(name="year",description="The current year we are in", example="2012") @RequestParam String year
     ) throws JsonProcessingException {
         log.info("getPublicHolidays: year={}, countryCode={}", year, countryCode);
         String result = publicHolidayQueryService.getJSON(year, countryCode);
