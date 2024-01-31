@@ -16,7 +16,7 @@ Lab instructions: <https://ucsb-cs156.github.io/w24/lab/team01.html>
 
 Repo: https://github.com/ucsb-cs156-w24/team01-w24-5pm-2
 
-On Heroku: https://team01.dokku-06.cs.ucsb.edu
+On Heroku: http://team01.dokku-06.cs.ucsb.edu
 
 ## About this repo
 
