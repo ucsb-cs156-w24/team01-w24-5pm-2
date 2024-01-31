@@ -29,11 +29,11 @@ import io.swagger.v3.oas.annotations.tags.Tag;
     @Autowired
     PublicHolidayQueryService publicHolidayQueryService;
 
-    @Operation(summary=&quot;Get a country's public holidays&quot;, description =&quot;JSON return format documented here: https://date.nager.at/Api&quot;)
+    @Operation(summary=&quot;Get public holidays for a given year and country&quot;, description =&quot;JSON return format documented here: https://date.nager.at/Api&quot;)
     @GetMapping(&quot;/get&quot;)
     public ResponseEntity&lt;String&gt; getPublicHolidays(
-        @Parameter(name=&quot;year&quot;, example=&quot;2012&quot;) @RequestParam String year,
-        @Parameter(name=&quot;countryCode&quot;, example=&quot;US&quot;) @RequestParam String countryCode
+         @Parameter(name=&quot;year&quot;,description=&quot;The current year we are in&quot;, example=&quot;2012&quot;) @RequestParam String year,
+	 @Parameter(name=&quot;countryCode&quot;, description=&quot;2 letter country code&quot;, example=&quot;US,MX,CN&quot;) @RequestParam String countryCode
     ) throws JsonProcessingException {
 <span class="fc" id="L38">        log.info(&quot;getPublicHolidays: year={}, countryCode={}&quot;, year, countryCode);</span>
 <span class="fc" id="L39">        String result = publicHolidayQueryService.getJSON(year, countryCode);</span>
