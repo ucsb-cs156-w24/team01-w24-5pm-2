@@ -18,7 +18,7 @@ import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.tags.Tag;
 
-@Tag(name="Location info from nominatim.openstreetmap.org")
+@Tag(name="Location info from nominatim.org")
 @Slf4j
 @RestController
 @RequestMapping("/api/locations")
