@@ -29,7 +29,7 @@ public class UniversityController {
     @Autowired
     UniversityQueryService UniversityQueryService;
 
-    @Operation(description = "Get list of universities that match a given name")
+    @Operation(summary = "Get list of universities that match a given name", description = "Uses API documented here: http://universities.hipolabs.com/search")
     @GetMapping("/get")
     public ResponseEntity<String> getUniversities(
         @Parameter(name="name", description= "name to search", example="Harvard") @RequestParam String name
