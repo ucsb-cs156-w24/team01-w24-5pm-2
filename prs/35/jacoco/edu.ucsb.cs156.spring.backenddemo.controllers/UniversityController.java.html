@@ -18,7 +18,7 @@ import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.tags.Tag;
 
-@Tag(name=&quot;University info from http://universities.hipolabs.com/&quot;)
+@Tag(name=&quot;University info from universities.hipolabs.com&quot;)
 <span class="fc" id="L22">@Slf4j</span>
 @RestController
 @RequestMapping(&quot;/api/university&quot;)
@@ -29,10 +29,10 @@ import io.swagger.v3.oas.annotations.tags.Tag;
     @Autowired
     UniversityQueryService UniversityQueryService;
 
-    @Operation(summary = &quot;Get information on a university&quot;)
+    @Operation(description = &quot;Get list of universities that match a given name&quot;)
     @GetMapping(&quot;/get&quot;)
     public ResponseEntity&lt;String&gt; getUniversities(
-        @Parameter(name=&quot;name&quot;, description=&quot;name of university&quot;, example=&quot;Harvard&quot;) @RequestParam String name
+        @Parameter(name=&quot;name&quot;, description= &quot;name to search&quot;, example=&quot;Harvard&quot;) @RequestParam String name
     ) throws JsonProcessingException {
 <span class="fc" id="L37">        log.info(&quot;getUniversities: name={}&quot;, name);</span>
 <span class="fc" id="L38">        String result = UniversityQueryService.getJSON(name);</span>
