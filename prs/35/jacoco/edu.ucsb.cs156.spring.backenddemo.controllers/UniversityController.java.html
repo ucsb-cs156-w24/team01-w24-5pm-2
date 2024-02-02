@@ -29,7 +29,7 @@ import io.swagger.v3.oas.annotations.tags.Tag;
     @Autowired
     UniversityQueryService UniversityQueryService;
 
-    @Operation(description = &quot;Get list of universities that match a given name&quot;)
+    @Operation(summary = &quot;Get list of universities that match a given name&quot;, description = &quot;Uses API documented here: http://universities.hipolabs.com/search&quot;)
     @GetMapping(&quot;/get&quot;)
     public ResponseEntity&lt;String&gt; getUniversities(
         @Parameter(name=&quot;name&quot;, description= &quot;name to search&quot;, example=&quot;Harvard&quot;) @RequestParam String name
