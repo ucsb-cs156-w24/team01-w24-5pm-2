@@ -3,14 +3,14 @@
 Lab instructions: <https://ucsb-cs156.github.io/w24/lab/team01.html>
 
 ```
-| Name                | GitHub Id        | Service                     | Controller                |
-|---------------------|------------------|-----------------------------|---------------------------|
-| Allen Qiu           | aqiu28517        | `LocationQueryService`      | `LocationController`      |
-| Olivia Chen         | livitsimple      | `PublicHolidayQueryService` | `PublicHolidayController` |
-| Maria Saucedo-Flores| Maria-Saucedo    | `TidesQueryService`         | `TidesController`         |
-| Meron Tesfandrias   | MeronDT          | `UniversityQueryService`    | `UniversityController`    |
-| Jiaqi Guan          | jiaquguan2003    | `ZipCodeQueryService`       | `ZipCodeController`       |
-| Jonathan Herring    | jonathan-herring | `JokeQueryService`          | `JokeController`          |
+| Name                 | GitHub Id        | Service                     | Controller                |
+|----------------------|------------------|-----------------------------|---------------------------|
+| Allen Qiu            | aqiu28517        | `LocationQueryService`      | `LocationController`      |
+| Olivia Chen          | livitsimple      | `PublicHolidayQueryService` | `PublicHolidayController` |
+| Maria Saucedo-Flores | Maria-Saucedo    | `TidesQueryService`         | `TidesController`         |
+| Meron Tesfandrias    | MeronDT          | `UniversityQueryService`    | `UniversityController`    |
+| Jiaqi Guan           | jiaquguan2003    | `ZipCodeQueryService`       | `ZipCodeController`       |
+| Jonathan Herring     | jonathan-herring | `JokeQueryService`          | `JokeController`          |
 ```
 
 
